@@ -113,6 +113,18 @@
   - Be carefult though these are all absolute URLs and in many cases 3rd party. More often we want relative and 1st party URLs
 
 - Relative URLs
+
   - A relative URL can infer the missing parts of the URL from the current document/app URL content
   - Example:
     - `<a href="/sectionA/page2.html">Link</a>` contains a relative URL it is mission protocol, port, and domain. All that is inferred from the document the link is found in.
+
+- URL Quetion Trilogy - Special Chars
+
+  - Are there special characters we should concern ourselves with>
+  - Yes - clearly : , /, ?, &, = and # might seem to trouble and of course a SPACE char as it terminates the URL
+  - URL Encoding is in the form `x-www-form-urlencoded` which is to replace the special chars with `%xx` values or in case of space maybe just a `+` or `%20`
+
+- Applied URLs
+  - URls are names (documents) and structure (site org and app endpoints) and as such should be considered carefully
+  - Some URLs you should consider public as they might be linked to and should be readable, permanent, and reasonbly short
+    - Think page URLs, common app state
