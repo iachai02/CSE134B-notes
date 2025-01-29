@@ -125,6 +125,63 @@
   - URL Encoding is in the form `x-www-form-urlencoded` which is to replace the special chars with `%xx` values or in case of space maybe just a `+` or `%20`
 
 - Applied URLs
+
   - URls are names (documents) and structure (site org and app endpoints) and as such should be considered carefully
   - Some URLs you should consider public as they might be linked to and should be readable, permanent, and reasonbly short
-    - Think page URLs, common app state
+    - Think page URLs, common app state or endpoints and content objects of importance like PDFs, certain images, etc.
+  - Other URLs you might consider private and might be cryptic and volatile
+    - Think dependencies like images, scripts, styles, etc.
+
+- The HTTP Law of 3
+  - HTTP packets have three pieces and all that matters are those three pieces
+    - Request/Response Type, Headers, Message Body
+- Take-aways for Now
+  1. HTTP is simple and stateless
+  - text protocol, request/response
+  2. complicated in page or app level execution
+  - 10s or even 100+ requests
+  - lots of details - headers, methods, networking, etc.
+  - interactions and relationship between data types via the Mime Type (Content-Type header)
+  3. From all of it rises everything else about the web
+  - understanding of HTTP and the foundational content types of the web leads to deep understanding
+
+## Rendering
+
+- Rendering
+
+  - To compose a page or view on your screen requires "rendering"
+  - even with the static web pages rendering happens as a browser composes the page from the content (material), markup (structure), media and style (presentation), and finally code (logic)
+  - while rendering always happens there are choices that should be made consciously unless you are to let performance and user experience be left up to chance or browser/framework design decisions
+  - TL;DR: understand rendering that the positive or negative experience a user has with your site or application isn't much under your control
+
+- Rendering Where and When
+
+  - While rendering always happens in a web application, the where and when can vary
+    - Where: server-side, client-side, or both
+      - The where question relates to the core characteristics of client and server (safety vs speed/scale)
+    - When: request time, build time (before request), or both
+      - The when question relates to the nature of the data static/dynamic and general/custom
+
+- Respect the Critical Rendering Path
+
+  - critical rendering path (CRP) is the set of steps that browsers take to convert your HTML, CSS, media assets like images, video, fonts, etc. and JavaScript into the final view or page the user experiences
+  - if you don't follow the path and understand how all the consistent parts of a page or view work together especially under real network conditions you may adversely effect a user's experience
+
+- Rough Process (Basic HTML + CSS Only)
+
+  1. Parse HTML markup and construct DOM Tree
+  2. Process CSS rules and build CSSOM Tree
+  3. Combine DOM and CSSOM to create render Tree
+  4. Utilize layout engine on render tree to calculate pixel info for each render tree node
+  5. Paint render tree nodes to the screen
+
+- Rought Process (With JavaScript and Media)
+  1. Parse HTML markup and construct DOM Tree
+     A. Dependent object fetch and association
+     B. Possible script run inline or fetch re-entering 1 or adjust 2
+  2. Process CSS rules and build CSSOM tree
+     C. Dependent object fetch and association
+  3. Combine DOM and CSSOM to create render tree
+     D. DOM and CSSOM trees may be manipulated via JS
+  4. Utilize layout engine on render tree to calculate pixel info for each render tree node
+  5. Paint render tree nodes to the screen
