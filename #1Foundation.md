@@ -176,6 +176,7 @@
   5. Paint render tree nodes to the screen
 
 - Rought Process (With JavaScript and Media)
+
   1. Parse HTML markup and construct DOM Tree
      A. Dependent object fetch and association
      B. Possible script run inline or fetch re-entering 1 or adjust 2
@@ -185,3 +186,12 @@
      D. DOM and CSSOM trees may be manipulated via JS
   4. Utilize layout engine on render tree to calculate pixel info for each render tree node
   5. Paint render tree nodes to the screen
+
+- When and What to Render
+
+  - Typically not everything on your screen is
+    - Fully dynamic
+    - fully static
+    - required
+    - optional
+  - we need to consider carefully the mixture and prioritize rendering and loading appropriately
