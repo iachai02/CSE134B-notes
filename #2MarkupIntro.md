@@ -60,6 +60,7 @@
     - XHTML - Extensible Hypertext markup language
 
 - Markup Quickstart
+
   - HTML document is a structured text document composed of elements, entitites and text fragments
   - markup elements are made up of a start tag (e.g. `<strong>`) and might include an end tag that contains a closing slash character (e.g. `</strong>`)
   - the browser applies the meaning of the element to the enclosed content
@@ -67,3 +68,30 @@
   - the start tag of an HTML element may contain attributes that modify the meaning of the tag
   - in traditional HTML some attributes affected a tag simply by their existence `<hr noshade>`
   - under XHTML attribute values are always required so `<hr noshade="noshade" /> would be the correct XHTML syntax
+
+- Markup Quickstart - Content Model
+
+  - The HTML specification indicates that some elements are only to used under certain conditions
+    - example: list items `<li>` are only supposed to occur within ordered list `<ol>` and unordered lists `<ul>`
+  - breaking the content model is quite common through and elements may be inserted by the user agent to mitigate the mistakes in most cases
+
+- Markup Quickstart - Entities
+  - characters that are special like <, >, &, etc. (these are part of the HTML syntax itself should be escaped)
+
+## Learning HTML Formally
+
+- Document Types
+  - All valid documents begin with a `<!DOCTYPE>` declaration
+    - in the basic sense it identifies the markup "dialect" used in a document by referencing an external DTD
+    - A DTD defines the actual elements, attributes, and element relationships that are valid in documents
+    - HTML 5 and beyond has a bit of a different attitude about doctypes, but we always must include one
+
+## Learning HTML Pracitically
+
+- Presentational vs. semantic markup
+  - traditionally HTML has struggled as a markup language because it supported both presentation elements (`<font>`, `<b>`, `<big>`, `<small>`) as well as more semantic elements (`<em>`, `<p>`, `<div>`, `<blockquote>`)
+- Curing `<div>`-itis
+  - some semantic alternatives to `<div>`
+    - when making a header, use the `<header>` element
+    - when making the navigation bar, use the `<nav>` element
+    - when dividing the content on a page into sections, use the `<section>` element
