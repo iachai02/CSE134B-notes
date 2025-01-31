@@ -190,3 +190,80 @@
 
 - `<script>`
   - putting `<script>` in a document head ensures it is loaded before the page unless directed otherwise by the (defer) attribute
+
+## Body Elements
+
+- `<body>`
+  - the `<body>` tag is used to contain the content of the document
+    - only one `<body>` per document
+
+## Sectioning Elements
+
+- `<main>`
+
+  - semantic element that should be used only once in the `<body>` and should not be contained inside of structures like `<header>`, `<footer>`, `<article>`, `<aside>`, or `<nav>`
+
+- `<section>` details
+
+  - sections can contain sub-sections and even `<header>` and `<footer>` tags
+
+- headings
+
+  - `<h1>`, `<h2>`, `<h3>`, etc
+  - headings are block tags
+
+- `<hgroup>`
+
+  - represents a multi-level heading for a section of a document
+    - groups a set of `<h#>` elements as one heading
+  - typically used to create subheadings
+
+- `<article>`
+
+- `<aside>`
+
+- `<p>`
+
+  - the `<p>` element indicates a paragraph of text
+    - the paragraph element has semantic meaning, though visually given that it is a block element most browsers will create a blank line between consecutive non-empty paragraphs
+    - you may see some developers insert simulate returns by inserting the character entity for a space in a paragraph
+
+- `<br>`
+
+  - `<br>` are empty elements that indicate line breaks
+
+- `<hr>`
+
+  - `<hr>` signifies a thematic break between paragraph-level elements - this is usually visually rendered by default with a horizontal line
+
+- `<nav>`
+
+- `<search>`
+
+  - a recent semantic addition to HTMl is a semantic element for indicating the elements are used as site/app search
+
+- divisions
+
+  - the `<div>` tag is a generic block tag used to create a division or "section" in a document
+
+- spans
+
+  - like `<div>`, the `<span>` tag is generic in that it has no predefined visual rendering
+  - `<span>` is an inline tag rather than a block tag so it is used to effect smaller regions of content
+
+- quotations
+
+  - large quotations are set off with `<blockquote>` and small inline quotations with the `<q>` tag
+
+- preformatted text
+
+  - the `<pre>` tag is used to indicated that something is preformatted, letting the browser know not to apply standard HTML rules of whitespace and formatting on it
+
+- `<figure>` and `<figcaption>`
+
+- address
+  - an `<address>` tag is used to set the address of the document's maintainer
+    - while it is a logical tag, it is usually rendered in the same font style as a paragraph tag except italicized
+  - generally should only be one of these per document and at the end of the document
+
+## Lists
