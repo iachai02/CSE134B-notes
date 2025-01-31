@@ -90,8 +90,14 @@
 
 - Presentational vs. semantic markup
   - traditionally HTML has struggled as a markup language because it supported both presentation elements (`<font>`, `<b>`, `<big>`, `<small>`) as well as more semantic elements (`<em>`, `<p>`, `<div>`, `<blockquote>`)
+
 - Curing `<div>`-itis
   - some semantic alternatives to `<div>`
     - when making a header, use the `<header>` element
     - when making the navigation bar, use the `<nav>` element
     - when dividing the content on a page into sections, use the `<section>` element
+
+- Curing Class-itis
+  1. use built-in elements `<button>` not `<div class="button">`
+  2. Rely on rules for built-ins and custom elements directly override groups with class, and do thing to specific instances via id
+  3. practice separating concerns with semantic markup - presentational classes with clear indications of look, aren't that
