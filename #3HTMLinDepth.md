@@ -91,3 +91,61 @@
 
 - translate
   - a newer global attribute translate would be used in conditions where automatic translation/localization is used to avoid items being converted
+
+## Interactivity Attributes
+
+- contenteditable
+
+  - when set to true allows simple editing of content in browser
+  - does not determine how the change is retained
+
+- contextmenu
+
+  - defines the DOM id of the `<menu>` to serve as a context menu for the element this attribute is defined for
+  - so far no implementations however, likely could be simulated with oncontextmenu event in JavaScript
+
+- draggable attribute
+
+  - attribute is set to true or false to indicate if an element is draggable or not
+
+- hidden attribute
+
+  - inidicates if an element is no longer relevant and should be hidden or not
+    - likely this is to address the misuse of the CSS rule (display : none)
+
+- spellcheck attribute
+  - this attribute can be set to true and false to allow for controlling checking the spelling of content
+    - dominantly used on form fields
+
+## Event Attributes
+
+- interactivity - event attributes
+  - mouse clicking
+    - onclick, ondblclick
+  - mouse buton movement
+    - onmousedown, onmouseup
+  - mouse movement
+    - onmouseover, onmousemove, onmouseout
+  - key presses
+    - onkeydown, onkeyup, onkeypress
+
+## Data Attributes
+
+- data-x attributes
+
+  - allows for user-defined meta data
+    - reduces name collision problems
+    - removes overloading of class attributes or invention of non-standard attributes
+
+- data-x versus class
+
+  - many devs overload the class attribute using it to signal the interactive nature of an element, hold element/component state, or even hold data
+
+- microdata
+  - microdata exists to offer scripts and machines data for the webpage that is a bit easier for them to parse so they don't have to dig around the page content for it
+    - all of the microdata attributes start with item
+  - itemscope neotes that the HTML contained inside the given block is an item
+    - itemprop lets you add a key/value pair to the itemscope object
+    - itemid lets you add a unique easily identifiable to the element with the itemscope to easily reference that item later
+    - itemref lets you include other itemscopes in your itemscope
+    - itemtype lets you link a schema / set of vocab that your microdata will be following
