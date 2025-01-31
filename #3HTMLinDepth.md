@@ -267,3 +267,39 @@
   - generally should only be one of these per document and at the end of the document
 
 ## Lists
+
+- unordered lists
+
+  - unordered lists specified with `<ul>` and items with `<li>`
+    - bullet lists
+    - visually generally the list is indented
+
+- definition lists
+  - the `<dl>` element defines a definition list and contains terms `<dt>` and definitions `<dd>`
+
+## Inline Elements
+
+- Logical Inline Elements
+
+  - recall the two types of tags - logical and physical
+
+- `<time>`
+
+- `<mark>`
+
+- `<output>`
+
+  - used to define a region that will be used as output from some calculation or form control
+
+- Inserted / Deleted Text
+
+  - HTML 4 introduced the idea of change tracking using `<ins>` and `<del>`
+
+- `<ruby>`, `<rt>`, `<rp>`
+
+## Links
+
+- A basic link
+  - links are defined with an `<a>` tag
+  - `<a href="about-the-author.html">About the Author</a>`
+  - rendering such links generally presents them as blue underlined text to be touched or clicked in browsers unless styled via CSS
