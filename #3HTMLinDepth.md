@@ -149,3 +149,44 @@
     - itemid lets you add a unique easily identifiable to the element with the itemscope to easily reference that item later
     - itemref lets you include other itemscopes in your itemscope
     - itemtype lets you link a schema / set of vocab that your microdata will be following
+
+## Head Elements
+
+- `<title>`
+
+  - most important head element
+    - for bookmarking
+    - for robots
+
+- meta information
+
+  - meta information is simply information about information
+    - typically used in searching and categorization of information
+    - think about ideas like subject, author, ISBN, page count, etc.
+  - on the web meta data is primarily indicated with the `<meta>` tag which can indicate arbitrary data
+  - the `<meta>` tag is mainly used for the following:
+    - author and description indications for search engines
+    - HTTP control information for caching, filtering, language or charset indication, and other delivery related services
+    - responsive design
+
+- `<meta>` syntax
+
+  - name attribute is used to specify the name of the meta data and the content attribute the associated information
+    - the choice ofo th ename and the content is actually somewhat arbitrary
+
+- link relationships
+
+  - linking can have meaning as specified by the `<link>` tag
+    - you can specify different stylesheets for different media types using the media attribute
+
+- `<base>`
+
+  - a `<base>` tag is used to set a reference or base URL so other links in the page assume this prefix
+
+- `<style>`
+
+  - `<style>` tags are often found in the document head and contain styles for the page
+  - the media attribute can be used to set style by output
+
+- `<script>`
+  - putting `<script>` in a document head ensures it is loaded before the page unless directed otherwise by the (defer) attribute
