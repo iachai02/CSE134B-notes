@@ -89,15 +89,89 @@
 ## Learning HTML Pracitically
 
 - Presentational vs. semantic markup
+
   - traditionally HTML has struggled as a markup language because it supported both presentation elements (`<font>`, `<b>`, `<big>`, `<small>`) as well as more semantic elements (`<em>`, `<p>`, `<div>`, `<blockquote>`)
 
 - Curing `<div>`-itis
+
   - some semantic alternatives to `<div>`
     - when making a header, use the `<header>` element
     - when making the navigation bar, use the `<nav>` element
     - when dividing the content on a page into sections, use the `<section>` element
 
 - Curing Class-itis
+
   1. use built-in elements `<button>` not `<div class="button">`
   2. Rely on rules for built-ins and custom elements directly override groups with class, and do thing to specific instances via id
   3. practice separating concerns with semantic markup - presentational classes with clear indications of look, aren't that
+
+- `<head>`
+
+  - The head of a document delimited by `<head>` includes supplementary information about the document including document title, scripts, styles, meta information, etc.
+
+- `<body>`
+
+  - body contains the content of the page
+  - generally it will be enclosed in larger block structures which in term enclose smaller structures
+
+- Within the `<body>`
+
+  - within the body you have block-level elements which define structural content blocks like paragraphs `<p>` or headings `<h1>`
+  - within block structures we see inline elements like bold `<b>`, emphasis `<em>` and so on
+
+- Block Elements
+
+  - what are they?
+    - elements that horizontally span their entire container and have a new line character before and after them
+    - they are only as tall as the content within them
+  - where are they used?
+    - typically are used to directly hold large amounts of content, and often act as parent containers
+  - examples
+    - `<p>`, `<article>`, `<details>`, `<div>`, `<figure>`
+
+- Inline Elements
+
+  - What are they?
+    - Elements that (by default) are only as wide and tall as content within them
+    - They do not have any new line characters since they are used inside of lines
+  - Where are they used?
+    - They typically are used within blocks of content, typically to add attributes to a specific bit of text for stylistic or functional purposes
+  - examples
+    - `<a>`, `<em>`, `<q>`, `<time>`, `<span>`, `<strong>`
+
+- Inline-Block Elements
+
+  - What are they?
+    - CSS specific designation as no element is inline-block by default in HTML
+    - In CSS, you can modify the height, width, padding, and margins of block level elements but not of inline level elements
+    - Setting an element to be inline-block allows you to modify those properties on the element while still treating it as if it were inline
+  - Where are they used?
+    - they have a variety of purposes, one such example may be in styling the links of a horizontal navigation bar
+
+- Within the `<body>`
+
+  - Further structures like lists `<ul>`, images `<img>`, scripts `<script>` are also found in the `<body>` but may fall outside the hierarchy you might expect
+  - the concept of tags enclosing only certain types of other tags is dubbed the content model
+
+- Void Elements
+
+  - do not enclose any content
+
+- Escapable Raw Text Elements
+
+  - These elements escape tags, but not character entities
+
+- Raw Text Elements
+
+  - elements contain other technologies (CSS or JavaScript) and should not be interpreted by HTML parsing
+
+- Template Element
+
+  - element is used to hold insert content. Tag is commonly used to define views to show with JavaScript or create custom elements. Content within templates will not show up on parse
+
+- Foreign Elements
+
+  - elements are from other "HTML" friendly languages notably MathML and SVG
+
+- Comment Usage - masking
+  - mask inline technology from downgrade user-agents so they do not treat it as page content
